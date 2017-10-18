@@ -1625,7 +1625,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/commands\data.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/commands/data.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
                   <h1>floyd data</h1>
@@ -1692,8 +1692,6 @@
 <p>Floyd can manage your experiment datasets and make them available when running your projects.This command initializes the 
 current directory and tracks all files and subdirectories. Make sure the dataset name you enter here already 
 exists in Floyd. In case the dataset name does not exist, the CLI will open the create dataset page in your browser.</p>
-<p>The init command also creates a <code class="codehilite"><span class="na">.floydignore</span></code> file. Any files and directories you do not want Floyd to track can be added 
-to this file. When you upload this dataset to Floyd, these files will not be uploaded.</p>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <p>Initialize a floyd dataset in your data directory.
 <div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> /data/mnist
@@ -1711,6 +1709,7 @@ Data <span class="nb">source</span> <span class="s2">&quot;mnist-data&quot;</spa
 <p>Upload contents of the current directory as a new version of the dataset. This data can now be referred to in the <a href="../run/">run</a> command.
 At run time the data will be available at the <code class="codehilite">/input</code> path.</p>
 <p>Floyd also versions your data so you can choose any specific version to use in your runs.</p>
+<p>Currently this command does NOT respect a <code class="codehilite"><span class="na">.floydignore</span></code> file. This functionality may be added in the future.</p>
 <h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
 <p><div class="codehilite"><pre><span></span>$ floyd data upload
 Creating data source. Uploading files ...
