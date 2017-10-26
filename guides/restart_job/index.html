@@ -438,6 +438,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#parameter-sweeping" title="Parameter sweeping:" class="md-nav__link">
+    Parameter sweeping:
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -1227,6 +1234,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#parameter-sweeping" title="Parameter sweeping:" class="md-nav__link">
+    Parameter sweeping:
+  </a>
+  
+</li>
+      
       
       
     </ul>
@@ -1285,6 +1299,29 @@ $ floyd restart mckay/projects/mnist/1 --gpu
 <div class="codehilite"><pre><span></span># Run the job with a new version of a dataset
 $ floyd restart mckay/projects/mnist/1 --data mckay/datasets/mnist/2:mnist
 </pre></div>
+
+<h2 id="parameter-sweeping">Parameter sweeping:<a class="headerlink" href="#parameter-sweeping" title="Permanent link">&para;</a></h2>
+<p>A great use case for the restart command is when you need to run a series of jobs with 
+different training parameters. You just need to make your training script take in all the 
+parameters from the command line. After you run the first job using the <code class="codehilite">floyd run</code> command:</p>
+<div class="codehilite"><pre><span></span><span class="n">#</span><span class="w"> </span><span class="n">Run</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">initial</span><span class="w"> </span><span class="n">parameters</span><span class="w"></span>
+<span class="n">$</span><span class="w"> </span><span class="n">floyd</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="o">--</span><span class="n">gpu</span><span class="w"> </span><span class="n">&quot;python</span><span class="w"> </span><span class="n">train</span><span class="o">.</span><span class="n">py</span><span class="w"> </span><span class="o">--</span><span class="n">learning-rate</span><span class="w"> </span><span class="mf">0.01</span><span class="w"> </span><span class="o">--</span><span class="n">batch-size</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="o">--</span><span class="n">epochs</span><span class="w"> </span><span class="mi">100</span><span class="n">&quot;</span><span class="w"></span>
+<span class="o">...</span><span class="w"></span>
+<span class="kd">JOB</span><span class="o"> </span><span class="n">NAME</span><span class="w"></span>
+<span class="o">--------------------------------</span><span class="w"></span>
+<span class="n">mckay/projects/tf-grid-search/1</span><span class="w"></span>
+</pre></div>
+
+<p>Now you can just restart this job with different set of parameters:</p>
+<div class="codehilite"><pre><span></span># Change the learning rate
+$ floyd restart mckay/projects/tf-grid-search/1 --gpu &quot;python train.py --learning-rate 0.05 --batch-size 8 --epochs 100&quot;
+</pre></div>
+
+<div class="codehilite"><pre><span></span># Change the number of epochs
+$ floyd restart mckay/projects/tf-grid-search/1 --gpu &quot;python train.py --learning-rate 0.05 --batch-size 8 --epochs 500&quot;
+</pre></div>
+
+<p>This gives you the ability to try a range of parameters without uploading your code each time.</p>
                 
                   
                 
