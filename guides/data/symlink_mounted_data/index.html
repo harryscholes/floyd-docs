@@ -1558,7 +1558,10 @@ python train_and_eval.py
 </pre></div>
 
 <p>Let's execute the bash script using <code class="codehilite">floyd run</code>:</p>
-<div class="codehilite"><pre><span></span>$ floyd run <span class="s2">&quot;bash run.sh&quot;</span>
+<div class="codehilite"><pre><span></span>$ floyd run <span class="se">\</span>
+  --data alice/datasets/imagenet-train/1:train <span class="se">\</span>
+  --data alice/datasets/imagenet-test/1:test <span class="se">\</span>
+   <span class="s2">&quot;bash run.sh&quot;</span>
 </pre></div>
 
 <p>Because the last line of our bash script runs our Python script, we can kick
