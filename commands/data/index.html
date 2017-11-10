@@ -1761,14 +1761,14 @@
 </tbody>
 </table>
 <h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
-<p>Floyd can manage your experiment datasets and make them available when running your projects.This command initializes the 
-current directory and tracks all files and subdirectories. Make sure the dataset name you enter here already 
+<p>Floyd can manage your experiment datasets and make them available when running your projects.This command initializes the
+current directory and tracks all files and subdirectories. Make sure the dataset name you enter here already
 exists in Floyd. In case the dataset name does not exist, the CLI will open the create dataset page in your browser.</p>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <p>Initialize a floyd dataset in your data directory.
 <div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> /data/mnist
-$ floyd data init mnist-data
-Data <span class="nb">source</span> <span class="s2">&quot;mnist-data&quot;</span> initialized in current directory
+$ floyd data init mnist
+Data <span class="nb">source</span> <span class="s2">&quot;mnist&quot;</span> initialized in current directory
 </pre></div></p>
 <hr />
 <h2 id="floyd-data-upload">floyd data upload<a class="headerlink" href="#floyd-data-upload" title="Permanent link">&para;</a></h2>
@@ -1787,7 +1787,7 @@ At run time the data will be available at the <code class="codehilite">/input</c
 Creating data source. Uploading files ...
 NAME
 --------------------
-alice/mnist-data:1  
+alice/mnist-data:1
 </pre></div>
 Floyd will generate a data id for the uploaded dataset. This uploaded dataset can be used in your future experiments, if needed,
 using this data id. See <a href="../../guides/data/mounting_data/#mounting-datasets">here</a> for more details.</p>
@@ -1821,8 +1821,8 @@ using this data id. See <a href="../../guides/data/mounting_data/#mounting-datas
 <div class="codehilite"><pre><span></span>$ floyd data status
 DATA NAME                         CREATED         STATUS    DISK USAGE
 --------------------------------  --------------  --------  ------------
-alice/datasets/mnist-data/2       <span class="m">57</span> seconds ago  valid     <span class="m">180</span>.0 KB
-alice/datasets/mnist-data/1       <span class="m">2</span> minutes ago   valid     <span class="m">10</span>.0 KB
+mckay/datasets/zeroes/1            <span class="m">57</span> seconds ago  valid     <span class="m">180</span>.0 KB
+mckay/datasets/mnist/1             <span class="m">2</span> minutes ago   valid     <span class="m">10</span>.0 KB
 </pre></div>
 
 <hr />
@@ -1855,12 +1855,12 @@ alice/datasets/mnist-data/1       <span class="m">2</span> minutes ago   valid  
 </tbody>
 </table>
 <h3 id="description_3">Description<a class="headerlink" href="#description_3" title="Permanent link">&para;</a></h3>
-<p>Deletes your datasets from FloydHub. This data will no longer 
+<p>Deletes your datasets from FloydHub. This data will no longer
 be accessible.</p>
 <p>Note: You do <em>not</em> have to be in the project directory to run this command.</p>
 <h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span>$ floyd data delete floydhub/datasets/csr/7
-Delete Data: floydhub/datasets/csr/7? <span class="o">[</span>y/N<span class="o">]</span>: y
+<div class="codehilite"><pre><span></span>$ floyd data delete mckay/datasets/mnist/1
+Delete Data: mckay/datasets/mnist/1? <span class="o">[</span>y/N<span class="o">]</span>: y
 Data deleted
 </pre></div>
 
@@ -1872,14 +1872,14 @@ Data deleted
 </pre></div>
 
 <h3 id="description_4">Description<a class="headerlink" href="#description_4" title="Permanent link">&para;</a></h3>
-<p>Add the contents of a job output to a dataset. This will appear as a new version of data in the dataset. This command is useful if you 
+<p>Add the contents of a job output to a dataset. This will appear as a new version of data in the dataset. This command is useful if you
 want to save the output of specific jobs under a dataset. Note: You will be charged for the disk usage separately.
 This new data can now be referred to in the <a href="../run/">run</a> command.</p>
 <h3 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h3>
-<p><div class="codehilite"><pre><span></span>$ floyd data add alice/projects/mnist/1/output
+<p><div class="codehilite"><pre><span></span>$ floyd data add mckay/projects/mnist/1/output
 DATA NAME                         CREATED    STATUS    DISK USAGE
 --------------------------------  ---------  --------  ------------
-alice/datasets/mnist-data/3       just now   valid     <span class="m">10</span>.0 KB
+mckay/datasets/mnist/1            just now   valid     <span class="m">10</span>.0 KB
 </pre></div>
 Floyd will generate a new version for the added data. This can be used in your future experiments, if needed,
 using this data id. See <a href="../../guides/data/mounting_data/#mounting-datasets">here</a> for more details.</p>
@@ -1913,10 +1913,10 @@ using this data id. See <a href="../../guides/data/mounting_data/#mounting-datas
 </tbody>
 </table>
 <h3 id="description_5">Description<a class="headerlink" href="#description_5" title="Permanent link">&para;</a></h3>
-<p>The output command gives the url to access a dataset. This command by default opens the data url 
+<p>The output command gives the url to access a dataset. This command by default opens the data url
 in your default browser.</p>
 <h3 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>$ floyd data output floydhub/datasets/csr/11
+<div class="codehilite"><pre><span></span>$ floyd data output mckay/datasets/mnist/1
 Opening output directory in your browser ...
 </pre></div>
 

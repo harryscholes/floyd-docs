@@ -1529,8 +1529,8 @@ chains a series of commands, which are executed in sequence:</p>
 </ol>
 <p>Here's the command in full:</p>
 <div class="codehilite"><pre><span></span>$ floyd run <span class="se">\</span>
-  --data alice/datasets/imagenet-train/1:train <span class="se">\</span>
-  --data alice/datasets/imagenet-test/1:test <span class="se">\</span>
+  --data udacity/datasets/bike-sharing-dataset/1:train <span class="se">\</span>
+  --data floydhub/datasets/mnist-test/1:test <span class="se">\</span>
   <span class="s2">&quot;mkdir -p /data &amp;&amp; ln -s /train /data &amp;&amp; ln -s /test /data &amp;&amp; python train_and_eval.py&quot;</span>
 </pre></div>
 
@@ -1559,8 +1559,8 @@ python train_and_eval.py
 
 <p>Let's execute the bash script using <code class="codehilite">floyd run</code>:</p>
 <div class="codehilite"><pre><span></span>$ floyd run <span class="se">\</span>
-  --data alice/datasets/imagenet-train/1:train <span class="se">\</span>
-  --data alice/datasets/imagenet-test/1:test <span class="se">\</span>
+  --data floydhub/datasets/imagenet-vgg-verydeep-19/1:train <span class="se">\</span>
+  --data floydhub/datasets/mnist/1:test <span class="se">\</span>
    <span class="s2">&quot;bash run.sh&quot;</span>
 </pre></div>
 

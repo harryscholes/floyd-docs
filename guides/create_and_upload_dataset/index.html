@@ -1340,7 +1340,7 @@ versioning data.</p>
 an open source project, this is a great way to share and contribute to the
 FloydHub community. If your data is proprietary, please select <code class="codehilite">Private</code>. This
 will ensure that only you and your team will have access to this dataset.</p>
-<p>The section below shows how to upload a dataset from your local machine. If your 
+<p>The section below shows how to upload a dataset from your local machine. If your
 data is available on the internet, you can can <a href="#download-large-datasets-directly-to-floydhub-from-the-internet">create a dataset out of it directly</a>.</p>
 <h2 id="upload-a-dataset">Upload a Dataset<a class="headerlink" href="#upload-a-dataset" title="Permanent link">&para;</a></h2>
 <p>Once you have created a dataset, you can upload data from your terminal using
@@ -1407,10 +1407,10 @@ for you. If you have a large dataset, unpacking your data on FloydHub's servers
 can take a while.</p>
 <p>You can check the status of your upload using <code class="codehilite">floyd data status</code> with the name
 of your dataset, as shown below:</p>
-<div class="codehilite"><pre><span></span>$ floyd data status mckay/datasets/my_dataset/1
+<div class="codehilite"><pre><span></span>$ floyd data status mckay/datasets/mnist/1
 DATA NAME                    CREATED        STATUS    DISK USAGE
 ---------------------------  -------------  --------  ------------
-mckay/datasets/my_dataset/1  <span class="m">3</span> minutes ago  valid     <span class="m">82</span>.96 MB
+mckay/datasets/mnist/1       <span class="m">3</span> minutes ago  valid     <span class="m">82</span>.96 MB
 </pre></div>
 
 <p><code class="codehilite">valid</code> is the state you're looking for. That means that your dataset has finished being unpacked and is ready to use.</p>
@@ -1461,7 +1461,7 @@ $ ls /output
 </pre></div>
 
 <h3 id="step-2-stop-the-jupyter-notebook-session-and-create-a-dataset-from-the-jobs-output">Step 2: Stop the Jupyter Notebook session and create a dataset from the job's output<a class="headerlink" href="#step-2-stop-the-jupyter-notebook-session-and-create-a-dataset-from-the-jobs-output" title="Permanent link">&para;</a></h3>
-<p>Navigate to your current job's page on FloydHub and click the Cancel button to stop this active Jupyter session. Once the job has been shut down, you can click the <code class="codehilite">Create Dataset</code> button on the <code class="codehilite">Output</code> tab to open a modal that will help you turn this output into a FloydHub dataset. </p>
+<p>Navigate to your current job's page on FloydHub and click the Cancel button to stop this active Jupyter session. Once the job has been shut down, you can click the <code class="codehilite">Create Dataset</code> button on the <code class="codehilite">Output</code> tab to open a modal that will help you turn this output into a FloydHub dataset.</p>
 <p><img alt="Job Output Page" src="../../img/output.png" /></p>
 <p>The modal will ask if you'd like to copy this output to one of your existing datasets or create a new dataset entirely.</p>
 <p><img alt="Create Dataset Modal" src="../../img/modal.png" /></p>

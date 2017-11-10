@@ -1231,16 +1231,16 @@ on <a href="https://www.floydhub.com">floydhub.com</a>.</p>
 <h2 id="using-the-cli">Using the CLI<a class="headerlink" href="#using-the-cli" title="Permanent link">&para;</a></h2>
 <p>A job can be stopped using the <code class="codehilite">floyd stop</code> command and passing it the name of
 your job, as shown below:</p>
-<div class="codehilite"><pre><span></span>$ floyd stop mckay/projects/my-project/4
+<div class="codehilite"><pre><span></span>$ floyd stop mckay/projects/ssh/2
 Experiment shutdown request submitted. Check status to confirm shutdown
 </pre></div>
 
 <p>To check the status of your job to make sure it has shut down properly, use the
 <code class="codehilite">floyd status</code> command, as shown below:</p>
-<div class="codehilite"><pre><span></span>$ floyd status mckay/projects/my-project/4
+<div class="codehilite"><pre><span></span>$ floyd status mckay/projects/ssh/2
 JOB NAME                     CREATED         STATUS      DURATION<span class="o">(</span>s<span class="o">)</span>  INSTANCE    DESCRIPTION
 ---------------------------  --------------  --------  -------------  ----------  -------------
-mckay/projects/my-project/4  <span class="m">47</span> seconds ago  shutdown              <span class="m">0</span>  c1
+mckay/projects/ssh/2         <span class="m">47</span> seconds ago  shutdown             <span class="m">24</span>  c1
 </pre></div>
 
 <h2 id="using-floydhubcom">Using floydhub.com<a class="headerlink" href="#using-floydhubcom" title="Permanent link">&para;</a></h2>

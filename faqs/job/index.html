@@ -1498,10 +1498,10 @@ command, Tensorflow will allocate the entire GPU memory to the current session a
 <h3 id="can-i-view-my-jupyter-notebook-after-my-job-has-stopped">Can I view my Jupyter Notebook after my job has stopped?<a class="headerlink" href="#can-i-view-my-jupyter-notebook-after-my-job-has-stopped" title="Permanent link">&para;</a></h3>
 <p>Yes. When you use a Jupyter Notebook on FloydHub, your Notebook is saved periodically in the <code class="codehilite">/output</code> dir. So, your work is not lost after your job has ended, shutdown or timed out.</p>
 <p>You can view your saved Notebook using the <a href="../../commands/output/">floyd output</a> command. Example:</p>
-<div class="codehilite"><pre><span></span>$ floyd output saip/projects/mnist-pytorch/3
+<div class="codehilite"><pre><span></span>$ floyd output redeipirati/projects/pytorch-fast-neural-style/3/output
 </pre></div>
 
-<p>Or in the <code class="codehilite">Output</code> tab of your job on the web dashboard, example: <code class="codehilite">www.floydhub.com/saip/projects/mnist-pytorch/3/output</code></p>
+<p>Or in the <code class="codehilite">Output</code> tab of your job on the web dashboard, example: <code class="codehilite">www.floydhub.com/redeipirati/projects/pytorch-fast-neural-style/3/output</code></p>
 <h3 id="can-i-restart-a-stopped-or-timed-out-job">Can I restart a stopped or timed out job?<a class="headerlink" href="#can-i-restart-a-stopped-or-timed-out-job" title="Permanent link">&para;</a></h3>
 <p>Unfortunately, not directly. We will be implementing a single command to do this soon!</p>
 <p>In the meanwhile, you can follow these steps to do this manually:</p>
@@ -1510,7 +1510,7 @@ command, Tensorflow will allocate the entire GPU memory to the current session a
 </ul>
 <div class="codehilite"><pre><span></span><span class="c1"># Download the saved Notebook from previous job</span>
 <span class="c1"># NOTE: This will overwrite the contents of your current dir</span>
-$ floyd data clone saip/projects/mnist-pytorch/3/output
+$ floyd data clone redeipirati/projects/pytorch-fast-neural-style/3/output
 
 <span class="c1"># Start a new job</span>
 $ floyd run --mode jupyter
