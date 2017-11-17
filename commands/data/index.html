@@ -1829,6 +1829,7 @@ using this data id. See <a href="../../guides/data/mounting_data/#mounting-datas
 </table>
 <h3 id="description_2">Description<a class="headerlink" href="#description_2" title="Permanent link">&para;</a></h3>
 <p>Lists all your datasets on Floyd with more details.</p>
+<p>This command can take a <a href="../../guides/shortnames">shortened job name</a>.</p>
 <h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span>$ floyd data status
 DATA NAME                         CREATED         STATUS    DISK USAGE
@@ -1869,7 +1870,8 @@ mckay/datasets/mnist/1             <span class="m">2</span> minutes ago   valid 
 <h3 id="description_3">Description<a class="headerlink" href="#description_3" title="Permanent link">&para;</a></h3>
 <p>Deletes your datasets from FloydHub. This data will no longer
 be accessible.</p>
-<p>Note: You do <em>not</em> have to be in the project directory to run this command.</p>
+<p>Note: You do <em>not</em> have to be in the project directory to run this command.
+This command can take a <a href="../../guides/shortnames">shortened job name</a>.</p>
 <h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
 <div class="codehilite"><pre><span></span>$ floyd data delete mckay/datasets/mnist/1
 Delete Data: mckay/datasets/mnist/1? <span class="o">[</span>y/N<span class="o">]</span>: y
@@ -1887,6 +1889,7 @@ Data deleted
 <p>Add the contents of a job output to a dataset. This will appear as a new version of data in the dataset. This command is useful if you
 want to save the output of specific jobs under a dataset. Note: You will be charged for the disk usage separately.
 This new data can now be referred to in the <a href="../run/">run</a> command.</p>
+<p>This command can take a <a href="../../guides/shortnames">shortened job name</a>.</p>
 <h3 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h3>
 <p><div class="codehilite"><pre><span></span>$ floyd data add mckay/projects/mnist/1/output
 DATA NAME                         CREATED    STATUS    DISK USAGE

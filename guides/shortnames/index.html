@@ -1284,12 +1284,27 @@ you leave out parts of a name, the CLI does the following:</p>
 <p>These assumptions allow you to avoid typing out a full name in almost any
 situation.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p>Here are some examples that demonstrate how to use shortnames. For these
-examples, we'll assume your username is <code class="codehilite">fooster</code>, the project you've
-initialized in the current directory is called <code class="codehilite">my_project</code>, and the last job
-you ran in <code class="codehilite">my_project</code> is number <code class="codehilite">3</code>. Each example will show two code
-snippets: the first showing a command using a shortened name, and a second
-showing the full-length equivalent of the first command.</p>
+<p>Below are some examples on how to use shortened names for jobs, datasets, and
+outout. While only a selection of Floyd CLI commands are used in these
+examples, anywhere job, output, or dataset name is used, a shortened name can
+be used.</p>
+<p>Below is a list of commands that take shortened names. Click on any item in the
+list to go to its documentation:</p>
+<ul>
+<li><a href="../../commands/status"><code class="codehilite">floyd status &lt;job_name&gt;</code></a></li>
+<li><a href="../../commands/clone"><code class="codehilite">floyd clone &lt;job_name&gt;</code></a></li>
+<li><a href="../../commands/info"><code class="codehilite">floyd info &lt;job_name&gt;</code></a></li>
+<li><a href="../../commands/logs"><code class="codehilite">floyd logs &lt;job_name&gt;</code></a></li>
+<li><a href="../../commands/output"><code class="codehilite">floyd output &lt;job_name&gt;</code></a></li>
+<li><a href="../../commands/stop"><code class="codehilite">floyd stop &lt;job_name&gt;</code></a></li>
+<li><a href="../../commands/delete"><code class="codehilite">floyd delete &lt;job_name&gt;</code></a></li>
+<li><a href="../../commands/restart"><code class="codehilite">floyd restart &lt;job_name&gt;</code></a></li>
+<li><a href="../../guides/data/mounting_data"><code class="codehilite">floyd run --data &lt;dataset_or_output_name&gt;:&lt;mount_point&gt;</code></a></li>
+<li><a href="../../commands/data"><code class="codehilite">floyd data status &lt;dataset_name&gt;</code></a></li>
+<li><a href="../../commands/data"><code class="codehilite">floyd data clone &lt;dataset_or_output_name&gt;</code></a></li>
+<li><a href="../../commands/data"><code class="codehilite">floyd data output &lt;dataset_or_output_name&gt;</code></a></li>
+<li><a href="../../commands/data"><code class="codehilite">floyd data delete &lt;dataset_name&gt;</code></a></li>
+</ul>
 <h2 id="job-name-examples">Job Name Examples<a class="headerlink" href="#job-name-examples" title="Permanent link">&para;</a></h2>
 <p>Here are some examples that demonstrate how to use shorter names when
 referencing a job. For these examples, we'll assume your username is <code class="codehilite">fooster</code>,
@@ -1297,6 +1312,7 @@ the project you've initialized in the current directory is called <code class="c
 and the last job you ran in <code class="codehilite">my_project</code> is number <code class="codehilite">3</code>. Each example will show
 two code snippets: the first showing a command using a shortened name, and a
 second showing the full-length equivalent of the first command.</p>
+<p>Below, we leave the job name completely blank and fall back on all our defaults: current user's username, current project's name, and most recent job number:</p>
 <p><div class="codehilite"><pre><span></span>$ floyd logs
 </pre></div>
 <div class="codehilite"><pre><span></span>$ floyd logs fooster/projects/my_project/3
@@ -1306,7 +1322,9 @@ second showing the full-length equivalent of the first command.</p>
 </pre></div>
 <div class="codehilite"><pre><span></span>$ floyd logs fooster/projects/my_project/1
 </pre></div></p>
-<p>Here, we want to specify a job under a different project, but still a project owned by our user. Because we don't specify a job number, the latest job will be used (let's say it's 5):</p>
+<p>Here, we want to specify a job under a different project, but still a project
+owned by our user. Because we don't specify a job number, the latest job will
+be used (let's say it's 5):</p>
 <p><div class="codehilite"><pre><span></span>$ floyd logs other_project
 </pre></div>
 <div class="codehilite"><pre><span></span>$ floyd logs fooster/projects/other_project/5
@@ -1327,7 +1345,7 @@ recent job, we'll specify the job number:</p>
 <p>Here are some examples that demonstrate how to use shorter names when
 referencing a dataset. For these examples, we'll assume your username is <code class="codehilite">fooster</code>,
 the dataset you've initialized in the current directory is called <code class="codehilite">my_dataset</code>,
-and most recent version of the dataset is 2. Each example will show
+and the most recent version of the dataset is <code class="codehilite">2</code>. Each example will show
 two code snippets: the first showing a command using a shortened name, and a
 second showing the same command with the full-length equivalent of the
 shortened name.</p>
@@ -1336,7 +1354,10 @@ shortened name.</p>
 </pre></div>
 <div class="codehilite"><pre><span></span>$ floyd data status fooster/datasets/my_dataset/1
 </pre></div></p>
-<p>Here, we open the browser to view the most recent version of our dataset:</p>
+<p>Here, we open the browser to view the most recent version of our dataset.
+Specifying nothing uses all our defaults--the current user's username, the
+dataset initialized in the current directory, and the most recent version of
+the dataset:</p>
 <p><div class="codehilite"><pre><span></span>$ floyd data output
 </pre></div>
 <div class="codehilite"><pre><span></span>$ floyd data output fooster/datasets/my_dataset/1
@@ -1361,8 +1382,8 @@ initialized in the current directory. Here are a couple examples:</p>
 </pre></div>
 <div class="codehilite"><pre><span></span>$ floyd run --data fooster/projects/my_project/3/output:/model <span class="s1">&#39;python eval.py&#39;</span>
 </pre></div></p>
-<p>Here we clone the output of job number 1 of our current project:
-<div class="codehilite"><pre><span></span>$ floyd data clone <span class="m">1</span>/output
+<p>Here we clone the output of job number 1 of our current project:</p>
+<p><div class="codehilite"><pre><span></span>$ floyd data clone <span class="m">1</span>/output
 </pre></div>
 <div class="codehilite"><pre><span></span>$ floyd data clone fooster/projects/my_project/1/output
 </pre></div></p>

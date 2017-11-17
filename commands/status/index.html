@@ -901,8 +901,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
@@ -1246,8 +1246,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" title="Example" class="md-nav__link">
-    Example
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
@@ -1301,10 +1301,12 @@
 </tbody>
 </table>
 <h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
-<p>Shows the status of a run, if the ID is specified. It can also list the status of all
+<p>Shows the status of a run, if the name is specified. It can also list the status of all
 the runs in the current project. You need to be in the project directory for this command to work.</p>
-<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>JOB NAME                                 CREATED       STATUS      DURATION<span class="o">(</span>s<span class="o">)</span>  INSTANCE    DESCRIPTION
+<p>This command can take a <a href="../../guides/shortnames">shortened job name</a>.</p>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>$ floyd status
+JOB NAME                                 CREATED       STATUS      DURATION<span class="o">(</span>s<span class="o">)</span>  INSTANCE    DESCRIPTION
 ---------------------------------        ------------  --------  -------------  ----------  -------------
 floydhub/projects/mnist-tensorboard/3    <span class="m">19</span> hours ago  success              <span class="m">16</span>  g1
 floydhub/projects/mnist-tensorboard/2    <span class="m">19</span> hours ago  success               <span class="m">3</span>  c1
