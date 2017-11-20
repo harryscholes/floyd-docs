@@ -766,8 +766,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#logging-in-without-opening-a-browser" title="Logging in without opening a browser" class="md-nav__link">
-    Logging in without opening a browser
+  <a href="#logging-in-using-username-and-password" title="Logging In Using Username and Password" class="md-nav__link">
+    Logging In Using Username and Password
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-in-using-an-auth-token" title="Logging in Using an Auth Token" class="md-nav__link">
+    Logging in Using an Auth Token
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-in-with-an-auth-token-without-opening-a-browser" title="Logging in with an Auth Token Without Opening a Browser" class="md-nav__link">
+    Logging in with an Auth Token Without Opening a Browser
   </a>
   
 </li>
@@ -1186,6 +1200,13 @@
 
 
     
+      
+      
+      
+
+
+
+    
   </ul>
 </nav>
                   </div>
@@ -1212,8 +1233,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#logging-in-without-opening-a-browser" title="Logging in without opening a browser" class="md-nav__link">
-    Logging in without opening a browser
+  <a href="#logging-in-using-username-and-password" title="Logging In Using Username and Password" class="md-nav__link">
+    Logging In Using Username and Password
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-in-using-an-auth-token" title="Logging in Using an Auth Token" class="md-nav__link">
+    Logging in Using an Auth Token
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-in-with-an-auth-token-without-opening-a-browser" title="Logging in with an Auth Token Without Opening a Browser" class="md-nav__link">
+    Logging in with an Auth Token Without Opening a Browser
   </a>
   
 </li>
@@ -1239,7 +1274,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/guides\basics\login.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/guides/basics/login.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
                   <h1>Log In Using Floyd CLI</h1>
@@ -1252,6 +1287,20 @@
 </ul>
 <p>You can use the <a href="../../../commands/login/">floyd login</a> command to log in to
 your FloydHub account through your command line</p>
+<h3 id="logging-in-using-username-and-password">Logging In Using Username and Password<a class="headerlink" href="#logging-in-using-username-and-password" title="Permanent link">&para;</a></h3>
+<p><code class="codehilite">floyd login</code> has a <code class="codehilite">--username</code> (or <code class="codehilite">-u</code>) flag and a <code class="codehilite">--password</code> (or <code class="codehilite">-p</code>)
+flag that are used for logging in with the username and password. You can pass
+both at the same time, or if you pass only the <code class="codehilite">-u</code> (or <code class="codehilite">--username</code>) flag with
+your username, you'll be prompted for you password:</p>
+<div class="codehilite"><pre><span></span>$ floyd login -u mckay
+Please enter your password:
+Login Successful as mckay
+</pre></div>
+
+<h3 id="logging-in-using-an-auth-token">Logging in Using an Auth Token<a class="headerlink" href="#logging-in-using-an-auth-token" title="Permanent link">&para;</a></h3>
+<p>If you don't pass the <code class="codehilite">-u</code> (or <code class="codehilite">--username</code>) flag to <code class="codehilite">floyd login</code>, you will be
+logging in using an auth token.</p>
+<p>Here's an example of the standard workflow:</p>
 <div class="codehilite"><pre><span></span>$ floyd login
 Authentication token page will now open in your browser. Continue? <span class="o">[</span>Y/n<span class="o">]</span>: y
 Please copy and paste the authentication token.
@@ -1265,7 +1314,7 @@ access this directly at
 your web dashboard).</p>
 <p><img alt="Windows 10 Login" src="../../../img/login_token.jpg" /></p>
 <p>Copy the token and paste it in your terminal.</p>
-<h3 id="logging-in-without-opening-a-browser">Logging in without opening a browser<a class="headerlink" href="#logging-in-without-opening-a-browser" title="Permanent link">&para;</a></h3>
+<h3 id="logging-in-with-an-auth-token-without-opening-a-browser">Logging in with an Auth Token Without Opening a Browser<a class="headerlink" href="#logging-in-with-an-auth-token-without-opening-a-browser" title="Permanent link">&para;</a></h3>
 <p>Sometimes you may need to log in to Floyd on a computer that can't open a
 browser. Using your
 <a href="https://www.floydhub.com/settings/security">token from floydhub.com</a>, you can
