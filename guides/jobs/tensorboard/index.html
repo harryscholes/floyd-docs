@@ -1383,21 +1383,21 @@
                 
                   <h1>Enable Tensorboard</h1>
                 
-                <p><a href="https://www.tensorflow.org/get_started/summaries_and_tensorboard">Tensorboard</a> 
-is a visualization tool for Tensorflow projects. Tensorboard can help 
-visualize the Tensorflow computation graph and plot quantitative metrics about your run. This 
+                <p><a href="https://www.tensorflow.org/get_started/summaries_and_tensorboard">Tensorboard</a>
+is a visualization tool for Tensorflow projects. Tensorboard can help
+visualize the Tensorflow computation graph and plot quantitative metrics about your run. This
 guide will help you understand how to enable Tensorboard in your jobs.</p>
 <h2 id="key-concepts-of-tensorboard">Key concepts of Tensorboard<a class="headerlink" href="#key-concepts-of-tensorboard" title="Permanent link">&para;</a></h2>
 <p>If you would like to know more about the concepts of Tensorboard please check out
 the <a href="https://github.com/tensorflow/tensorflow/blob/r1.2/tensorflow/tensorboard/README.md#key-concepts">Tensorboard README</a>
-file. This page also goes into the details of Tensorboard and explains the various 
+file. This page also goes into the details of Tensorboard and explains the various
 dashboards that are present in the Tensorboard UI.</p>
 <h2 id="enabling-tensorboard-in-your-job">Enabling Tensorboard in your job<a class="headerlink" href="#enabling-tensorboard-in-your-job" title="Permanent link">&para;</a></h2>
-<p>To enable Tensorboard in your job, you need to specify a <code class="codehilite">--tensorboard</code> flag 
-when you run the job. Tensorboard can be enabled for both CLI jobs and when running 
+<p>To enable Tensorboard in your job, you need to specify a <code class="codehilite">--tensorboard</code> flag
+when you run the job. Tensorboard can be enabled for both CLI jobs and when running
 Jupyter notebooks.</p>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
-<p>This code snipped will train an MNIST model and also store the training summary 
+<p>This code snipped will train an MNIST model and also store the training summary
 to a log directory.</p>
 <div class="codehilite"><pre><span></span>git clone https://github.com/floydhub/tensorflow-examples
 <span class="nb">cd</span> tensorflow-examples/tensorboard
@@ -1409,27 +1409,27 @@ floyd run --tensorboard <span class="s2">&quot;python mnist_tensorboard.py --log
 
 <div class="admonition important">
 <p>Notice that the the <code class="codehilite">log_dir</code> parameter is set to a path in the <code class="codehilite">/output</code> directory.
-On Floydhub, <code class="codehilite">/output</code> is a special directory that Tensorboard watches. Be sure to send 
+On Floydhub, <code class="codehilite">/output</code> is a special directory that Tensorboard watches. Be sure to send
 all data meant for Tensorboard to any directory under <code class="codehilite">/output</code> path.</p>
 </div>
 <p>Now you can view the job on your Project dashboard.</p>
 <p><img alt="Project Dashboard" src="../../../img/tensorboard_dashboard.png" /></p>
-<p>Click on the job that was just started. You will notice that the job page now has a link 
+<p>Click on the job that was just started. You will notice that the job page now has a link
 to Tensorboard. Click on it to open the Tensorboard dashboard in a new tab.</p>
 <p><img alt="Tensonboard URL" src="../../../img/tensorboard_url.png" /></p>
 <h3 id="tensorboard-dashboard">Tensorboard Dashboard<a class="headerlink" href="#tensorboard-dashboard" title="Permanent link">&para;</a></h3>
 <p><img alt="Tensorboard Dashboard" src="../../../img/tensorboard_main.png" /></p>
-<p>You can see that the "SCALARS" tab of Tensorboard is logging the accuracy of the 
-training and test data along with some other values. You may need to click on the title 
+<p>You can see that the "SCALARS" tab of Tensorboard is logging the accuracy of the
+training and test data along with some other values. You may need to click on the title
 bars (like <code class="codehilite">accuracy_1</code>) for the graph to open.</p>
-<p>The reason why these values are appearing on the dashboard is because the 
+<p>The reason why these values are appearing on the dashboard is because the
 <code class="codehilite">mnist_tensorboard.py</code> code has the following lines:</p>
 <div class="codehilite"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="s1">&#39;cross_entropy&#39;</span><span class="p">,</span> <span class="n">cross_entropy</span><span class="p">)</span>
 <span class="o">...</span>
 <span class="n">tf</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">scalar</span><span class="p">(</span><span class="s1">&#39;accuracy&#39;</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">)</span>
 </pre></div>
 
-<p>You can read more about how to use Tensorboard to log additional information in 
+<p>You can read more about how to use Tensorboard to log additional information in
 the <a href="https://github.com/tensorflow/tensorflow/blob/r1.2/tensorflow/tensorboard/README.md#key-concepts">Tensorboard README</a>.</p>
 <p>Explore the other tabs in the Tensorboad dashboard like "IMAGES" and "GRAPHS".</p>
 <h3 id="tensorboard-tabs">Tensorboard Tabs<a class="headerlink" href="#tensorboard-tabs" title="Permanent link">&para;</a></h3>
@@ -1439,38 +1439,33 @@ in real time while the training is happening.</p>
 <p><img alt="Tensorboard Graphs" src="../../../img/tensorboard_graph.png" /></p>
 <p>The GRAPHS dashboard shows a representation of Tensorflow's computation graph.
 You can click into each part of the model to get more details.</p>
-<div class="admonition note">
-<p>Tensorboard feature is only available for Tensorflow environments. 
-See <a href="../../environments/">this</a> page for full list of Tensorflow environments you 
-can use.</p>
-</div>
 <h3 id="stopping-tensorboard">Stopping Tensorboard<a class="headerlink" href="#stopping-tensorboard" title="Permanent link">&para;</a></h3>
-<p>Tensorboard runs in the same machine where your code is running. So you do not have 
-to stop it explicitly. It will be up until your job finishes and then stop automatically. 
-Tensorboard will become inaccessible when the job finishes in any of the <code class="codehilite">Success</code>, <code class="codehilite">Failed</code>, 
+<p>Tensorboard runs in the same machine where your code is running. So you do not have
+to stop it explicitly. It will be up until your job finishes and then stop automatically.
+Tensorboard will become inaccessible when the job finishes in any of the <code class="codehilite">Success</code>, <code class="codehilite">Failed</code>,
 <code class="codehilite">Timeout</code> or <code class="codehilite">Shutdown</code> states.</p>
 <h3 id="tensorboard-in-jupyter-mode">Tensorboard in Jupyter mode<a class="headerlink" href="#tensorboard-in-jupyter-mode" title="Permanent link">&para;</a></h3>
-<p>Tensorboard can be run in Jupyter mode as well. You will notice that the links for both 
+<p>Tensorboard can be run in Jupyter mode as well. You will notice that the links for both
 the Jupyter notebook and the Tensorboard appear in the Job page.</p>
 <p><img alt="Tensorboard and Jupyter" src="../../../img/tensorboard_jupyter.png" /></p>
 <h2 id="offline-training">Offline Training<a class="headerlink" href="#offline-training" title="Permanent link">&para;</a></h2>
-<p>Until now, we saw how to use Tensorboard directly on Floydhub <em>while</em> your job is actively running. 
-Alternatively you can also view the metrics offline after your 
+<p>Until now, we saw how to use Tensorboard directly on Floydhub <em>while</em> your job is actively running.
+Alternatively you can also view the metrics offline after your
 training is done.</p>
-<p>For that, you need to first download the output of your project to your local 
+<p>For that, you need to first download the output of your project to your local
 machine.</p>
 <div class="codehilite"><pre><span></span>mkdir tensorboard_output <span class="o">&amp;&amp;</span> <span class="nb">cd</span> tensorboard_output
 floyd data clone floydhub/mnist-tensorboard/6/output
 </pre></div>
 
-<p>Then you need to install tensorflow in your local machine. The instructions depend 
+<p>Then you need to install tensorflow in your local machine. The instructions depend
 on your OS. See the Tensorflow install instructions <a href="https://www.tensorflow.org/install/">here</a>.</p>
-<p>After that you can just run the <code class="codehilite">tensorboard</code> command and point it to the output 
+<p>After that you can just run the <code class="codehilite">tensorboard</code> command and point it to the output
 directory downloaded from Floydhub.</p>
 <div class="codehilite"><pre><span></span>tensorboard --logdir<span class="o">=</span>tensorboard_output
 </pre></div>
 
-<p>Then you can view the Tensorboard dashboard on your machine running at 
+<p>Then you can view the Tensorboard dashboard on your machine running at
 <a href="http://127.0.0.1:6006/"><a href="http://127.0.0.1:6006/">http://127.0.0.1:6006/</a></a></p>
 <h2 id="video-tutorial-on-tensorboard">Video Tutorial on Tensorboard<a class="headerlink" href="#video-tutorial-on-tensorboard" title="Permanent link">&para;</a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HZADAKZOf6U?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>

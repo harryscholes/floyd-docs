@@ -1408,21 +1408,19 @@ manager to install dependencies using <code class="codehilite">apt-get</code>.</
 <p><img alt="Install non-Python package inside Jupyter Notebook" src="../../../img/jupyter_command_non-python.jpg" /></p>
 <h2 id="installing-and-enabling-unofficial-jupyter-notebook-extensions">Installing and Enabling Unofficial Jupyter Notebook Extensions<a class="headerlink" href="#installing-and-enabling-unofficial-jupyter-notebook-extensions" title="Permanent link">&para;</a></h2>
 <p>All the <a href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions">Unfofficial Jupyter Notebook Extensions</a> are provided as python packages, therefore take a look at the above section about <a href="../#installing-pythondependencies">how to install Python dependencies</a>.</p>
-<p>You can enable the extensions in two ways (we will show you how to do it for the <a href="https://github.com/damianavila/RISE">RISE extension</a>):</p>
+<p>Here are the steps to enable the extensions (we will show you how to do it for the <a href="https://github.com/damianavila/RISE">RISE extension</a>):</p>
 <ol>
 <li>
 <p><a href="../../ssh/">Open a Terminal</a> and run the configuration steps:
     <div class="codehilite"><pre><span></span>root@task-instance-container:/output# jupyter-nbextension install rise --py --sys-prefix
-root@task-instance-container:/output# jupyter-nbextension enable rise --py --sys-prefix
+root@task-instance-container:/output# jupyter-nbextension <span class="nb">enable</span> rise --py --sys-prefix
 </pre></div></p>
 </li>
 <li>
-<p>Run the bash command(through Jupyter Magic) inside a Code Cell:</p>
-<p><img alt="Enable extensions with Jupyter Magic" src="../../../img/rise-ext-code.png" /></p>
+<p>When you open a notebook, you will see the button extension:</p>
+<p><img alt="Rise ext enabled" src="../../../img/rise-ext.png" /></p>
 </li>
 </ol>
-<p>Then, when you open the notebook/reload the page, you will see the button extensions:</p>
-<p><img alt="Rise ext enabled" src="../../../img/rise-ext.png" /></p>
 <hr />
 <h2 id="help-make-this-document-better">Help make this document better<a class="headerlink" href="#help-make-this-document-better" title="Permanent link">&para;</a></h2>
 <p>This guide, as well as the rest of our docs, are open-source and available on 
