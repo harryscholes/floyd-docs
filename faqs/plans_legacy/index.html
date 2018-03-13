@@ -1237,6 +1237,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#preemptible-instances-deprecation-notice" title="Preemptible Instances deprecation notice" class="md-nav__link">
+    Preemptible Instances deprecation notice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#which-plan-is-right-for-me" title="Which Plan is right for me?" class="md-nav__link">
     Which Plan is right for me?
   </a>
@@ -1557,6 +1564,15 @@
                 <p>Please see here for <a href="../billing/">Billing FAQs</a></p>
 <h2 id="legacy-plans-faqs">Legacy Plans FAQs<a class="headerlink" href="#legacy-plans-faqs" title="Permanent link">&para;</a></h2>
 <h3 id="note-that-these-plans-are-no-longer-available-the-following-faqs-are-for-users-who-signed-up-before-november-20-2017-for-the-latest-faqs-please-see-plans-faqs">Note that these plans are no longer available. The following FAQs are for users who signed up before November 20, 2017. For the latest FAQs, please see <a href="../plans/">Plans FAQs</a><a class="headerlink" href="#note-that-these-plans-are-no-longer-available-the-following-faqs-are-for-users-who-signed-up-before-november-20-2017-for-the-latest-faqs-please-see-plans-faqs" title="Permanent link">&para;</a></h3>
+<h3 id="preemptible-instances-deprecation-notice">Preemptible Instances deprecation notice<a class="headerlink" href="#preemptible-instances-deprecation-notice" title="Permanent link">&para;</a></h3>
+<p>Starting March 7, 2018 we are no longer supporting premptible instances on FloydHub. All instances will now be dedicated 
+instances. This change was made in response to AWS (our cloud provider) making changes to the way Spot instances behaved for the 
+purposes of running Machine Learning training jobs. The spot instances were preempted too frequently and led to a poor 
+user experience and low SLA. So we made the decision to upgrade all the instances our fleet to dedicated instances.</p>
+<p>If you are using any preemptible instance Powerups they will be deprecated soon and you will not be able to purchase new powerups 
+of the same kind. Existing preemptible powerups will continue to work but autorefreshes will be turned off on April 5, 2018.
+So we recommend that you switch to the new Powerups before the cut-off date. Contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#102;&#108;&#111;&#121;&#100;&#104;&#117;&#98;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#102;&#108;&#111;&#121;&#100;&#104;&#117;&#98;&#46;&#99;&#111;&#109;</a> if you have any 
+questions about this.</p>
 <h3 id="which-plan-is-right-for-me">Which Plan is right for me?<a class="headerlink" href="#which-plan-is-right-for-me" title="Permanent link">&para;</a></h3>
 <h4 id="free-plan">Free Plan<a class="headerlink" href="#free-plan" title="Permanent link">&para;</a></h4>
 <p>If you're just exploring, the Free plan is for you! You are automatically

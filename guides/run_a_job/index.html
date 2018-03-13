@@ -426,19 +426,6 @@
     Instance Type
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-is-the-difference-between-a-preemptible-and-a-dedicated-instance" title="What is the difference between a preemptible and a dedicated instance?" class="md-nav__link">
-    What is the difference between a preemptible and a dedicated instance?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1426,19 +1413,6 @@
     Instance Type
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-is-the-difference-between-a-preemptible-and-a-dedicated-instance" title="What is the difference between a preemptible and a dedicated instance?" class="md-nav__link">
-    What is the difference between a preemptible and a dedicated instance?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
           <li class="md-nav__item">
@@ -1546,7 +1520,7 @@
 <p><code class="codehilite">floyd run [OPTIONS] [COMMAND]</code></p>
 <p><strong><a href="#options_1">[OPTIONS]</a>:</strong></p>
 <ul>
-<li><a href="#instance-type">Instance Type</a>: <code class="codehilite">--cpu</code> <strong>or</strong> <code class="codehilite">--gpu</code> <strong>or</strong> <code class="codehilite">--cpu+</code> <strong>or</strong> <code class="codehilite">--gpu+</code></li>
+<li><a href="#instance-type">Instance Type</a>: <code class="codehilite">--cpu</code> <strong>or</strong> <code class="codehilite">--gpu</code> <strong>or</strong> <code class="codehilite">--cpu2</code> <strong>or</strong> <code class="codehilite">--gpu2</code></li>
 <li><a href="#datasets">Dataset(s)</a>: <code class="codehilite">--data &lt;name_of_datasource&gt;:&lt;mount_point_on_server&gt;</code></li>
 <li><a href="#mode">Mode</a>: <code class="codehilite">--mode &lt;mode_name&gt;</code></li>
 <li><a href="#environment">Environment</a>: <code class="codehilite">--env &lt;environment_name&gt;</code></li>
@@ -1567,7 +1541,7 @@ quick reference.</p>
 <h2 id="parts-of-the-floyd-run-command">Parts of the <code class="codehilite">floyd run</code> Command<a class="headerlink" href="#parts-of-the-floyd-run-command" title="Permanent link">&para;</a></h2>
 <h3 id="options"><a href="#options_1">[OPTIONS]</a><a class="headerlink" href="#options" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="#instance-type">Instance Type</a>: <code class="codehilite">--cpu</code> <strong>or</strong> <code class="codehilite">--gpu</code> <strong>or</strong> <code class="codehilite">--cpu+</code> <strong>or</strong> <code class="codehilite">--gpu+</code></li>
+<li><a href="#instance-type">Instance Type</a>: <code class="codehilite">--cpu</code> <strong>or</strong> <code class="codehilite">--gpu</code> <strong>or</strong> <code class="codehilite">--cpu2</code> <strong>or</strong> <code class="codehilite">--gpu2</code></li>
 <li><a href="#datasets">Dataset(s)</a>: <code class="codehilite">--data</code></li>
 <li><a href="#mode">Mode</a>: <code class="codehilite">--mode</code></li>
 <li><a href="#environment">Environment</a>: <code class="codehilite">--env</code></li>
@@ -1595,22 +1569,22 @@ detailed below:</p>
 <tr>
 <td align="left"><code class="codehilite">--gpu</code></td>
 <td align="center">GPU</td>
-<td align="left">Preemptible GPU server</td>
+<td align="left">Tesla K80 GPU machine</td>
 </tr>
 <tr>
-<td align="left"><code class="codehilite">--gpu+</code></td>
+<td align="left"><code class="codehilite">--gpu2</code></td>
 <td align="center">GPU</td>
-<td align="left">Dedicated GPU server</td>
+<td align="left">Tesla V100  GPU machine</td>
 </tr>
 <tr>
 <td align="left"><code class="codehilite">--cpu</code></td>
 <td align="center">CPU</td>
-<td align="left">Preemptible CPU server</td>
+<td align="left">2 Core low perf CPU machine</td>
 </tr>
 <tr>
-<td align="left"><code class="codehilite">--cpu+</code></td>
+<td align="left"><code class="codehilite">--cpu2</code></td>
 <td align="center">CPU</td>
-<td align="left">Dedicated CPU server</td>
+<td align="left">8 Core high perf CPU machine</td>
 </tr>
 </tbody>
 </table>
@@ -1619,15 +1593,11 @@ detailed below:</p>
 <ul>
 <li>The default instance flag is <code class="codehilite">--cpu</code>. This means that if you don't pass
   any of the above flags to <code class="codehilite">floyd run</code>, your job will be run on a
-  preemptible CPU server.</li>
+  CPU server.</li>
 <li>If you pass more than one instance flag, this is the order of precedence:
-  <code class="codehilite">--gpu+</code>, <code class="codehilite">--cpu+</code>, <code class="codehilite">--gpu</code>, <code class="codehilite">--cpu</code></li>
+  <code class="codehilite">--gpu</code>, <code class="codehilite">--cpu</code>, <code class="codehilite">--gpu2</code>, <code class="codehilite">--cpu2</code></li>
 </ul>
 </div>
-<h4 id="what-is-the-difference-between-a-preemptible-and-a-dedicated-instance">What is the difference between a preemptible and a dedicated instance?<a class="headerlink" href="#what-is-the-difference-between-a-preemptible-and-a-dedicated-instance" title="Permanent link">&para;</a></h4>
-<p>Refer to <a href="../../faqs/plans/#preemptible-vs-dedicated-instances">this section</a> of
-the documentation for more information about dedicated and preemptible
-instances.</p>
 <h3 id="datasets">Dataset(s)<a class="headerlink" href="#datasets" title="Permanent link">&para;</a></h3>
 <p>You can specify up to five datasources (datasets or outputs from previous jobs)
 to mount to the server that will be running your job. For each datasource,
