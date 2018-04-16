@@ -478,9 +478,34 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Notifications
+      </label>
+    
     <a href="./" title="Notifications" class="md-nav__link md-nav__link--active">
       Notifications
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#steps-to-create-an-incoming-webhook-in-your-slack" title="Steps to create an incoming webhook in your Slack" class="md-nav__link">
+    Steps to create an incoming webhook in your Slack
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1241,6 +1266,20 @@
   
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#steps-to-create-an-incoming-webhook-in-your-slack" title="Steps to create an incoming webhook in your Slack" class="md-nav__link">
+    Steps to create an incoming webhook in your Slack
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1251,7 +1290,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/guides/notifications.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/guides\notifications.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
                   <h1>Notifications</h1>
@@ -1263,14 +1302,14 @@
 <li>Job is manually shutdown</li>
 <li>Job failed, i.e. error in code, timeout, or insufficient powerup credits</li>
 </ul>
-<p>Steps to create an incoming webhook in your Slack:</p>
+<h2 id="steps-to-create-an-incoming-webhook-in-your-slack">Steps to create an incoming webhook in your Slack<a class="headerlink" href="#steps-to-create-an-incoming-webhook-in-your-slack" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Create an incoming webhook in Slack app <a href="https://slack.com/apps/A0F7XDUAZ-incoming-webhooks">here</a></li>
-<li>Click <code class="codehilite">add configuration</code></li>
-<li>Select the channel that you want to post the notifications</li>
-<li>Scroll down to <code class="codehilite">Integration Settings</code></li>
-<li>Copy the webhook URL (don't worry about the other settings, we'll handle it).</li>
-<li>Make sure to click on <code class="codehilite">Save Settings</code></li>
+<li>Create an incoming webhook in your Slack app <a href="https://slack.com/apps/A0F7XDUAZ-incoming-webhooks">here</a>.</li>
+<li>Click <code class="codehilite">Add Configuration</code>.</li>
+<li>Select the channel that you want to post the notifications. Click <code class="codehilite">Add Incoming Webhooks integration</code>.</li>
+<li>Scroll down to <code class="codehilite">Integration Settings</code>.</li>
+<li>Copy the <code class="codehilite">Webhook URL</code> (don't worry about the other settings, we'll handle it).</li>
+<li>Make sure to click on <code class="codehilite">Save Settings</code>.</li>
 <li>In Floydhub, go to <a href="https://www.floydhub.com/settings/notifications">Notifications settings</a>, paste in the Slack webhook url, and click save.</li>
 </ol>
 <p>For more information on configuring webhooks in Slack, please see Slack's
