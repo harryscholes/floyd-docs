@@ -611,9 +611,9 @@
             "title": "SSH into a Job"
         },
         {
-            "location": "/guides/slack_notification/",
-            "text": "You can setup Slack notifications to receive alerts on your jobs.  You will receive a notification when:\n\n\n\n\nJob completes successfully\n\n\nIdel Jupyter job is shutdown automatically\n\n\nJob fails due to error in code\n\n\nJob fails due to timeout or insufficient powerup credits\n\n\nUser manually cancels the job\n\n\n\n\nSteps to create an incoming webhook in your Slack:\n\n\n\n\nCreate an incoming webhook in Slack app \nhere\n\n\nClick \nadd configuration\n\n\nSelect the channel that you want to post the notifications\n\n\nScroll down to \nIntegration Settings\n\n\nCopy the webhook URL (don't worry about the other settings, we'll handle it).\n\n\nMake sure to click on \nSave Settings\n\n\nIn Floydhub, go to \nNotifications settings\n, paste in the Slack webhook url, and click save.\n\n\n\n\nFor more information on configuring webhooks in Slack, please see Slack's\n\nhelp page\n.",
-            "title": "Slack Notification"
+            "location": "/guides/notifications/",
+            "text": "You can setup Slack notifications to receive alerts on your jobs.  You will receive a notification when:\n\n\n\n\nJob completes successfully\n\n\nIdle Jupyter job is shutdown automatically\n\n\nJob is manually shutdown\n\n\nJob failed, i.e. error in code, timeout, or insufficient powerup credits\n\n\n\n\nSteps to create an incoming webhook in your Slack:\n\n\n\n\nCreate an incoming webhook in Slack app \nhere\n\n\nClick \nadd configuration\n\n\nSelect the channel that you want to post the notifications\n\n\nScroll down to \nIntegration Settings\n\n\nCopy the webhook URL (don't worry about the other settings, we'll handle it).\n\n\nMake sure to click on \nSave Settings\n\n\nIn Floydhub, go to \nNotifications settings\n, paste in the Slack webhook url, and click save.\n\n\n\n\nFor more information on configuring webhooks in Slack, please see Slack's\n\nhelp page\n.",
+            "title": "Notifications"
         },
         {
             "location": "/faqs/job/",
