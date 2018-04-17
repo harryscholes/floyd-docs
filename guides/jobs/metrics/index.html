@@ -1341,6 +1341,11 @@
 </pre></div></p>
 <p>For example, if you want to report accuracy values:
 <div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;{&quot;metric&quot;: &quot;accuracy&quot;, &quot;value&quot;: 0.985}&#39;</span><span class="p">)</span>
+<span class="c1"># {&quot;metric&quot;: &quot;accuracy&quot;, &quot;value&quot;: 0.985}</span>
+</pre></div>
+Or loss:
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;{{&quot;metric&quot;: &quot;loss&quot;, &quot;value&quot;: {}}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">loss</span><span class="p">))</span>
+<span class="c1"># {&quot;metric&quot;: &quot;loss&quot;, &quot;value&quot;: 1.000000}</span>
 </pre></div></p>
 <p>You can send any metric you want as a Training Metric, however the only values we accept currently are <code class="codehilite">float</code> or <code class="codehilite">integer</code> values. If you are interested in sending other values as custom training metrics, please let us know by sending an email to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#102;&#108;&#111;&#121;&#100;&#104;&#117;&#98;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#102;&#108;&#111;&#121;&#100;&#104;&#117;&#98;&#46;&#99;&#111;&#109;</a></p>
 <p>Training metrics are currently only available for <code class="codehilite">Command Mode</code> jobs - not Jupyter Notebook jobs or Serving jobs.</p>
