@@ -20,7 +20,7 @@
     
     
       
-        <title>Notifications - FloydHub Documentation</title>
+        <title>Slack Notifications - FloydHub Documentation</title>
       
     
     
@@ -90,7 +90,7 @@
                 </span>
               
             
-            Notifications
+            Slack Notifications
           
         </span>
       </div>
@@ -479,11 +479,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Notifications
+        Slack Notifications
       </label>
     
-    <a href="./" title="Notifications" class="md-nav__link md-nav__link--active">
-      Notifications
+    <a href="./" title="Slack Notifications" class="md-nav__link md-nav__link--active">
+      Slack Notifications
     </a>
     
       
@@ -1293,9 +1293,10 @@
                   <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/guides\notifications.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
-                  <h1>Notifications</h1>
+                  <h1>Slack Notifications</h1>
                 
-                <p>You can setup Slack notifications to receive alerts on your jobs.  You will receive a notification when:</p>
+                <p><img alt="" src="../../img/slack_notifications/FloydHubSlack.png" /></p>
+<p>You can setup Slack notifications to receive alerts on your FloydHub jobs.  You will receive a notification when:</p>
 <ul>
 <li>Job completes successfully</li>
 <li>Idle Jupyter job is shutdown automatically</li>
@@ -1305,12 +1306,17 @@
 <h2 id="steps-to-create-an-incoming-webhook-in-your-slack">Steps to create an incoming webhook in your Slack<a class="headerlink" href="#steps-to-create-an-incoming-webhook-in-your-slack" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Create an incoming webhook in your Slack app <a href="https://slack.com/apps/A0F7XDUAZ-incoming-webhooks">here</a>.</li>
-<li>Click <code class="codehilite">Add Configuration</code>.</li>
-<li>Select the channel that you want to post the notifications. Click <code class="codehilite">Add Incoming Webhooks integration</code>.</li>
-<li>Scroll down to <code class="codehilite">Integration Settings</code>.</li>
-<li>Copy the <code class="codehilite">Webhook URL</code> (don't worry about the other settings, we'll handle it).</li>
-<li>Make sure to click on <code class="codehilite">Save Settings</code>.</li>
-<li>In Floydhub, go to <a href="https://www.floydhub.com/settings/notifications">Notifications settings</a>, paste in the Slack webhook url, and click save.</li>
+<li>Click <strong>Add Configuration</strong>.
+<img alt="Add Configuration" src="../../img/slack_notifications/AddConfiguration.jpg" /></li>
+<li>Select the channel that you want to post the notifications. Click <strong>Add Incoming Webhooks integration</strong>.
+<img alt="Select Channel" src="../../img/slack_notifications/SelectChannel.png" /></li>
+<li>Scroll down to <strong>Integration Settings</strong>. Copy the <strong>Webhook URL</strong> (don't worry about the other settings, we'll handle it).
+<img alt="Copy Webhook URL" src="../../img/slack_notifications/WebhookURL.png" /></li>
+<li>Make sure to click on <strong>Save Settings</strong>.</li>
+<li>In Floydhub, go to <a href="https://www.floydhub.com/settings/notifications">Notifications settings</a>, paste in the Slack webhook url, and click <strong>Save</strong>.
+<img alt="Notification Settings" src="../../img/slack_notifications/NotificationSettings.png" /></li>
+<li>Click <strong>Test</strong> to receive your first Slack notification! Going forward, you should receive notifications for all jobs you run on FloydHub.
+<img alt="Slack Notification" src="../../img/slack_notifications/notification.png" /></li>
 </ol>
 <p>For more information on configuring webhooks in Slack, please see Slack's
 <a href="https://get.slack.help/hc/en-us/articles/115005265063-Incoming-WebHooks-for-Slack">help page</a>.</p>
