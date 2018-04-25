@@ -1368,7 +1368,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/commands\login.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/commands/login.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
                   <h1>floyd login</h1>
@@ -1389,11 +1389,6 @@
 </thead>
 <tbody>
 <tr>
-<td><code class="codehilite">--token</code></td>
-<td>False</td>
-<td>If specified, browser will not open. You can paste your token in the command line. <br><strong>Note</strong>: This is only supported with <code class="codehilite">version 0.7.2+</code> of <code class="codehilite">floyd-cli</code>. If you get an error, please upgrade using <code class="codehilite">pip install -U floyd-cli</code> and try again</td>
-</tr>
-<tr>
 <td><code class="codehilite">--username</code></td>
 <td>False</td>
 <td>FloydHub username. If specified, must include <code class="codehilite">--password</code></td>
@@ -1403,28 +1398,32 @@
 <td>False</td>
 <td>FloydHub password</td>
 </tr>
+<tr>
+<td><code class="codehilite">--token</code></td>
+<td>False</td>
+<td>If specified, authentication token will be used instead of credentials</td>
+</tr>
 </tbody>
 </table>
 <h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
-<p>You need to login to Floyd before running any other command. The login flow will require an access token from the Floydhub 
-website. You will be prompted to enter you credentials to get your access token. Copy and paste the token on the command line 
-to complete login.</p>
-<p>Alternatively, you can use the username and password parameters to directly login from the command line. In case you
-run in to any issues logging in with username / password, try logging in with the token as explain above.</p>
+<p>You need to login to FloydHub before running any other command. You can use your FloydHub username and password to 
+login. Alternatively you can also use the access token available in the 
+<a href="https://www.floydhub.com/settings/security">Auth Token</a> page on the website to login.</p>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
-<p>To automatically open your browser
 <div class="codehilite"><pre><span></span>$ floyd login
-Authentication token page will now open in your browser. Continue? <span class="o">[</span>Y/n<span class="o">]</span>:
-Please paste the token here:
+Login with your FloydHub username and password to run jobs.
+Username <span class="o">[</span>alice<span class="o">]</span>: alice
+Password: 
 Login Successful as alice
-</pre></div></p>
-<p>In case you use remote machines and do not have access to the browser, you can copy the token from the 
-<a href="https://www.floydhub.com/welcome">dashboard</a> and use the <code class="codehilite">--token</code> parameter when you login.
+</pre></div>
+
+<p>For automated systems use the authentication token.
 <div class="codehilite"><pre><span></span>$ floyd login --token
-Please copy and paste the token here:
+Please paste the authentication token from https://www.floydhub.com/settings/security.
+This is an invisible field. Paste token and press ENTER:
 Login Successful as alice
 </pre></div></p>
-<p>If you are using the credentials directly:
+<p>You can also specify the credentials on the command line.
 <div class="codehilite"><pre><span></span>$ floyd login --username alice --password &lt;redacted&gt;
 Login Successful as alice
 </pre></div></p>
