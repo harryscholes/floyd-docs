@@ -1534,7 +1534,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/faqs\billing.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
+                  <a href="https://github.com/floydhub/floyd-docs/edit/master/docs/faqs/billing.md" title="Edit this page" class="md-icon md-content__icon">edit</a>
                 
                 
                   <h1>Billing</h1>
@@ -1542,9 +1542,9 @@
                 <p>Please see here for <a href="../plans/">Plan FAQs</a></p>
 <h2 id="payment-questions">Payment Questions<a class="headerlink" href="#payment-questions" title="Permanent link">&para;</a></h2>
 <h3 id="what-forms-of-payments-do-you-accept">What forms of payments do you accept?<a class="headerlink" href="#what-forms-of-payments-do-you-accept" title="Permanent link">&para;</a></h3>
-<p>We accept Visa, MasterCard, American Express and Discover credit and debit cards. We do not accept prepaid cards at the moment. </p>
-<p>We are a US based company. If you are outside the US, please ensure your card has 
-international transactions enabled.</p>
+<p>We accept Visa, MasterCard, American Express and Discover credit, debit and prepaid cards.</p>
+<p>We are a US based company. If you are outside the US, <em>please ensure your card has
+international transactions enabled.</em></p>
 <h3 id="do-you-keep-my-credit-card-information">Do you keep my credit card information?<a class="headerlink" href="#do-you-keep-my-credit-card-information" title="Permanent link">&para;</a></h3>
 <p>No, we do not retain any credit card information. We use
 <a href="https://stripe.com/">Stripe</a> to process payments.</p>
@@ -1553,7 +1553,6 @@ international transactions enabled.</p>
 <p><img alt="Payment processing failed" src="../../img/payment-processing-failed.jpg" /></p>
 <p>Some common causes are:</p>
 <ul>
-<li><strong>Credit and Debit cards only</strong>: We currently accept only Visa, Mastercard and AmEx credit and debit cards. We do not accept prepaid cards. Please ensure you are using a valid credit or debit card.</li>
 <li><strong>Balance</strong>: We issue a small $0-1 transaction on your card as a pending authorization request between our billing system and the bank that issued your credit or debit card. If this authorization fails, you won't be able to add your card. Please ensure you have enough balance and are using a valid card. <em>Note</em>: This is an authorization request only, not an actual charge.</li>
 <li><strong>Fraud Detection</strong>: We use Stripe for managing all our payments. They have their own fraud detection algorithm which can decline some cards. Please try a different payment method.</li>
 <li><strong>International Cards</strong>: We are a US based company. If you are outside the US please ensure your card has international transactions enabled.</li>
@@ -1561,14 +1560,14 @@ international transactions enabled.</p>
 <p>If you are still unable to add your payment, please contact us directly at <a href="mailto:support@floydhub.com"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#102;&#108;&#111;&#121;&#100;&#104;&#117;&#98;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#102;&#108;&#111;&#121;&#100;&#104;&#117;&#98;&#46;&#99;&#111;&#109;</a></a>.</p>
 <h2 id="billing-questions">Billing Questions<a class="headerlink" href="#billing-questions" title="Permanent link">&para;</a></h2>
 <h3 id="what-am-i-billed-for">What am I billed for?<a class="headerlink" href="#what-am-i-billed-for" title="Permanent link">&para;</a></h3>
-<p>Your usage includes compute (CPU / GPU) usage and storage consumption. </p>
+<p>Your usage includes compute (CPU / GPU) usage and storage consumption.</p>
 <ul>
 <li>
 <p><strong>Compute</strong>: You will be billed exactly for the duration that your job runs, rounded off to the nearest second.</p>
 <p>Note that you are only charged for compute when your job is in the <em>Running</em> state. You will <em>not</em> be charged when your job is in any other state, including <em>Queued</em> and <em>Shutdown</em>.</p>
 </li>
 <li>
-<p><strong>Storage</strong>: You will also be charged for the storage you consume, rounded off to the nearest kB. </p>
+<p><strong>Storage</strong>: You will also be charged for the storage you consume, rounded off to the nearest kB.</p>
 <p>Storage is consumed by the datasets that you upload, your code and the data that your jobs output.</p>
 </li>
 </ul>
@@ -1576,14 +1575,14 @@ international transactions enabled.</p>
 <p>For monthly subscription plans, your card will be charged every month on the day you upgraded to the plan. For example, if you upgraded from the Beginner to the Data Scientist plan on the 22<sup>nd</sup> of August, you will be charged immediately. You will be then billed on the 22<sup>nd</sup> of every month.</p>
 <p>When you purchase Powerups, either directly from the <a href="https://www.floydhub.com/settings/powerups">Powerups Dashboard</a> or via auto-refresh, you will be charged at the time of purchase.</p>
 <h3 id="can-i-upgrade-or-downgrade-my-plan">Can I upgrade or downgrade my plan?<a class="headerlink" href="#can-i-upgrade-or-downgrade-my-plan" title="Permanent link">&para;</a></h3>
-<p>You can upgrade or downgrade your subscriptions at anytime from your <a href="https://www.floydhub.com/settings/plan">Plans page</a> under Settings on your dashboard. 
-You will be immediately changed to the new plan. </p>
+<p>You can upgrade or downgrade your subscriptions at anytime from your <a href="https://www.floydhub.com/settings/plan">Plans page</a> under Settings on your dashboard.
+You will be immediately changed to the new plan.</p>
 <p>Upgrades and downgrades do not affect any Powerups you may have purchased.</p>
 <h3 id="how-do-upgrades-work">How do upgrades work?<a class="headerlink" href="#how-do-upgrades-work" title="Permanent link">&para;</a></h3>
 <p>When you upgrade from the Beginner plan to a paid plan, you will be charged immediately. You will then be billed on the 1 month anniversary of your subscription date every month. For example, if you upgrade on August 20<sup>th</sup>, 2017, you will be charged on that day and on the 20<sup>th</sup> of every subsequent month.</p>
 <p>When you upgrade from one paid plan to another, you will be charged for your new plan on a pro-rated basis. Lets say your billing cycle is on the 20<sup>th</sup> of every month. If you upgrade from the Beginner to the Pro plan on the 5<sup>th</sup>, you will be charged for the new plan on a pro-rated basis (5<sup>th</sup> to 20<sup>th</sup>).</p>
 <h3 id="how-do-downgrades-work">How do downgrades work?<a class="headerlink" href="#how-do-downgrades-work" title="Permanent link">&para;</a></h3>
-<p>You can downgrade at any time to a lower or Beginner plan. </p>
+<p>You can downgrade at any time to a lower or Beginner plan.</p>
 <h3 id="how-do-i-remove-my-credit-card">How do I remove my credit card?<a class="headerlink" href="#how-do-i-remove-my-credit-card" title="Permanent link">&para;</a></h3>
 <p>Please downgrade to the Beginner plan and remove your credit card on file.</p>
 <h3 id="do-my-remaining-compute-credits-roll-over-each-month-if-i-dont-use-them-all">Do my remaining compute credits roll over each month if I don't use them all?<a class="headerlink" href="#do-my-remaining-compute-credits-roll-over-each-month-if-i-dont-use-them-all" title="Permanent link">&para;</a></h3>
