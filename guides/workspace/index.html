@@ -528,6 +528,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../run_on_floydhub_button/" title="Run on FloydHub Button" class="md-nav__link">
+      Run on FloydHub Button
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1578,7 +1590,7 @@
 <p><img alt="create workspace" src="../../img/workspace/create_workspace.png" /></p>
 <p><em>Currently, you can create only one workspace in a project. You can delete the existing workspace to create a new one.</em></p>
 <h3 id="stopping-a-workspace">Stopping a workspace<a class="headerlink" href="#stopping-a-workspace" title="Permanent link">&para;</a></h3>
-<p>You can see the current status of your workspace in the top bar. If you want to stop this workspace, click the <em>Shutdown</em> button. All your files and directories in the current directory (<code class="codehilite">/floyd/code</code>) will be saved and persisted.</p>
+<p>You can see the current status of your workspace in the top bar. If you want to stop this workspace, click the <em>Shutdown</em> button. All your files and directories in the current directory (<code class="codehilite">/floyd/input</code>) will be saved and persisted.</p>
 <p><img alt="image" src="https://dzwonsemrish7.cloudfront.net/items/0t36131c3j2d0s130W22/Image%202018-05-04%20at%203.04.20%20PM.png" /></p>
 <p><em>Important: Save all your notebooks and files before shutting down the workspace. All running notebooks and scripts will be stopped during Shutdown.</em></p>
 <div class="admonition error">
@@ -1589,15 +1601,15 @@
 <p>You can resume working on a stopped workspace by clicking the <em>Resume</em> button in the project page. This will restore the workspace to its previous state.</p>
 <p><img alt="image" src="https://dzwonsemrish7.cloudfront.net/items/1S1A2j0W3z1E0t0A0E1F/%5Bb53674349b29b7d68696f30142a8345f%5D_Image+2018-05-04+at+3.09.45+PM.png" /></p>
 <h2 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h2>
-<p>Your workspace is located at <code class="codehilite">/floyd/code</code> on the filesystem. <em>Only</em> code and data files that you store in this directory will be preserved across restarts.</p>
+<p>Your workspace is located at <code class="codehilite">/floyd/input</code> on the filesystem. <em>Only</em> code and data files that you store in this directory will be preserved across restarts.</p>
 <div class="admonition warning">
-<p class="admonition-title">Store your files in /floyd/code</p>
-<p>FloydHub only persists files that are stored under <code class="codehilite">/floyd/code</code>. Make sure you store all the files you want persisted here. Files stored in any other location will <strong>not</strong> be saved when your workspace is shutdown.</p>
+<p class="admonition-title">Store your files in /floyd/input</p>
+<p>FloydHub only persists files that are stored under <code class="codehilite">/floyd/input</code>. Make sure you store all the files you want persisted here. Files stored in any other location will <strong>not</strong> be saved when your workspace is shutdown.</p>
 </div>
 <h3 id="uploading-code-from-local-computer">Uploading code from local computer<a class="headerlink" href="#uploading-code-from-local-computer" title="Permanent link">&para;</a></h3>
 <p>You can upload your code and other files from your local machine using the upload button in the File Viewer panel (on the left).</p>
 <p><img alt="image" src="../../img/workspace/upload_code.png" /></p>
-<p><em>Make sure you upload your code into the <code class="codehilite">/floyd/code</code> directory.</em></p>
+<p><em>Make sure you upload your code into the <code class="codehilite">/floyd/input</code> directory.</em></p>
 <h3 id="downloading-code-from-github">Downloading code from Github<a class="headerlink" href="#downloading-code-from-github" title="Permanent link">&para;</a></h3>
 <p>If your code is on Github (or any online repository), you can also clone your repository using the <code class="codehilite">git clone</code> command.</p>
 <p><a href="#using-terminal">Using the Terminal</a>:</p>
@@ -1617,28 +1629,28 @@
 <h3 id="downloading-data-from-internet">Downloading data from internet<a class="headerlink" href="#downloading-data-from-internet" title="Permanent link">&para;</a></h3>
 <p>If your data is available on the internet, you can also download it directly into your workspace <a href="#using-terminal">using the Terminal</a>.</p>
 <div class="codehilite"><pre><span></span># Ensure you&#39;re in your workspace directory
-cd /floyd/code
+cd /floyd/input
 
 wget http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
 </pre></div>
 
 <h3 id="attaching-floydhub-datasets">Attaching FloydHub datasets<a class="headerlink" href="#attaching-floydhub-datasets" title="Permanent link">&para;</a></h3>
-<p>FloydHub provides an easy way to manage large datasets that you can use across projects. Instead of downloading your data everytime you start a workspace, you can <a href="https://docs.floydhub.com/guides/create_and_upload_dataset/">upload your data as a FloydHub dataset</a>. </p>
+<p>FloydHub provides an easy way to manage large datasets that you can use across projects. Instead of downloading your data everytime you start a workspace, you can <a href="https://docs.floydhub.com/guides/create_and_upload_dataset/">upload your data as a FloydHub dataset</a>.</p>
 <p>You can attach FloydHub datasets to your workspace using the right panel. You need to specify the name of the dataset and the directory where you want to attach it. Once the data mounting finishes, you can start using the files in your code.</p>
 <p>Example: Attaching the MNIST dataset <a href="https://www.floydhub.com/mckay/datasets/mnist/1"><a href="https://www.floydhub.com/mckay/datasets/mnist/1">https://www.floydhub.com/mckay/datasets/mnist/1</a></a>
 <img alt="mount data" src="https://dzwonsemrish7.cloudfront.net/items/1U0X1m400U0z2L3f002J/Screen%20Recording%202018-05-05%20at%2002.19%20PM.gif" /></p>
 <p>Once you attach a dataset, it will be available even when you stop and resume the workspace. Currently there is no option to remove a mounted dataset.</p>
 <p><em>Tip:</em> You can hide the panel on the right by clicking the <em>&gt;&gt;</em> arrow on the panel.</p>
 <h4 id="viewing-attached-datasets">Viewing attached datasets<a class="headerlink" href="#viewing-attached-datasets" title="Permanent link">&para;</a></h4>
-<p>All FloydHub datasets are attached under <code class="codehilite">/floyd/data</code>. You can view your attached datasets using the File Viewer panel. Make sure to click the <em>Home</em> icon and select the <code class="codehilite">data</code> dirctory.</p>
+<p>All FloydHub datasets are attached under <code class="codehilite">/floyd/input</code>. You can view your attached datasets using the File Viewer panel. Make sure to click the <em>Home</em> icon and select the <code class="codehilite">data</code> dirctory.</p>
 <p><img alt="View attached dataset" src="../../img/workspace/view_attached_datasets.png" /></p>
 <p>You can also view them using <a href="#using-terminal">the Terminal</a>:</p>
-<div class="codehilite"><pre><span></span>ls /floyd/data
+<div class="codehilite"><pre><span></span>ls /floyd/input
 </pre></div>
 
 <h2 id="switching-between-cpu-and-gpu">Switching between CPU and GPU<a class="headerlink" href="#switching-between-cpu-and-gpu" title="Permanent link">&para;</a></h2>
-<p>You can easily switch the instance type of your workspace using the <em>Restart</em> button. </p>
-<p>For example: if you are working on a Jupyter notebook in a CPU instance, you can switch to a GPU instance to speed up your training. To restart your workspace click the "Restart" button and select the new instance you want to use. </p>
+<p>You can easily switch the instance type of your workspace using the <em>Restart</em> button.</p>
+<p>For example: if you are working on a Jupyter notebook in a CPU instance, you can switch to a GPU instance to speed up your training. To restart your workspace click the "Restart" button and select the new instance you want to use.</p>
 <p><img alt="restart workspace" src="https://dzwonsemrish7.cloudfront.net/items/0U3Q1O2Q0A192x3H0P2q/Screen%20Recording%202018-05-04%20at%2003.40%20PM.gif" /></p>
 <p>You can <a href="https://www.floydhub.com/settings/powerups">purchase powerups</a> if you are low on runtime to start a workspace.</p>
 <div class="admonition warning">
