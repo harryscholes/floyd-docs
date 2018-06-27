@@ -1181,15 +1181,27 @@
       
 
 
+  <li class="md-nav__item">
+    <a href="../../floyd_config/" title="Floyd Config File" class="md-nav__link">
+      Floyd Config File
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
-    <label class="md-nav__link" for="nav-10">
+    <label class="md-nav__link" for="nav-11">
       Examples
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
+      <label class="md-nav__title" for="nav-11">
         Examples
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1243,13 +1255,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
     
-    <label class="md-nav__link" for="nav-11">
+    <label class="md-nav__link" for="nav-12">
       Videos
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
+      <label class="md-nav__title" for="nav-12">
         Videos
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1279,13 +1291,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
     
-    <label class="md-nav__link" for="nav-12">
+    <label class="md-nav__link" for="nav-13">
       Troubleshooting & FAQs
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-12">
+      <label class="md-nav__title" for="nav-13">
         Troubleshooting & FAQs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1567,7 +1579,7 @@
 <h4 id="why-is-my-gpu-usage-at-0">Why is my GPU usage at 0%?<a class="headerlink" href="#why-is-my-gpu-usage-at-0" title="Permanent link">&para;</a></h4>
 <p>Verify that your framework supports GPU acceleration. Tensorflow <a href="https://www.tensorflow.org/programmers_guide/using_gpu">automatically enables GPU</a> and uses it for your training. 
 For PyTorch you need to <a href="https://pytorch.org/docs/master/notes/cuda.html">enable cuda</a>. For other frameworks, please consult the framework docs for this.</p>
-<p>Note: All the operations can be placed on the GPU. Some frameworks provide an API for the device placement of specific operations and variables - this can be a really useful tool for debugging this issue. Please consult the framework docs for this.</p>
+<p><strong>Note</strong>: <em>Not all the operations can be placed on the GPU.</em> Some frameworks provide an API for the device placement of specific operations and variables - this can be a really useful tool for debugging this issue. Please consult the framework docs for this.</p>
 <div class="admonition warning">
 <p class="admonition-title">Metrics frequency</p>
 <p>The system metrics on FloydHub are collected every 60 seconds. If your computation is not consistently high it will fall within the sampling frequency and you may not see the change in system metrics.
@@ -1575,7 +1587,7 @@ For example: training a shallow network on the MNIST data will finish within a f
 </div>
 <div class="admonition important">
 <p class="admonition-title">Real-time monitoring</p>
-<p>For a more fine grained monitoring of the machine resources we recommend running these commands from a terminal: <code class="codehilite">top</code> and <code class="codehilite">nvidia-smi -l 2</code></p>
+<p>For a more fine grained monitoring of the machine resources we recommend running these commands from a terminal: <code class="codehilite">top</code> and <code class="codehilite">watch -n1 nvidia-smi</code> (or <code class="codehilite">nvidia-smi -l 2</code>)</p>
 </div>
 <h3 id="ram-memory-utilization">RAM (Memory) Utilization<a class="headerlink" href="#ram-memory-utilization" title="Permanent link">&para;</a></h3>
 <p>Insights for RAM Utilization will indicate when your FloydHub machine's RAM is getting close to its maximum, which could lead to Out-of-Memory Errors.</p>
